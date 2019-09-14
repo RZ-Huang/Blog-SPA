@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  font: 14px "Century Gothic", Futura, sans-serif;
+  background-color: #d5f1d4;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 10px;
+}
+
+
+.nav-item,.nav-item span {
+  background-color: #d4d4d4;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.nav-home, .nav-about {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-home:hover, .nav-about:hover, .post-title:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav-title {
+  padding: 10px;
+}
+
+.posts {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.post-title {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.posts-content {
+  font-size: 20px;
+}
+
+.posts-back {
+  background-color: #ffff78;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.posts-back:hover {
+  font-size: 20px;
+}
+
+.main-about {
+  margin: 20px;
+}
+
+.main-about-title {
+  text-decoration: underline;
+}
+
+.main-about-content {
+  font-size: 16px;
+}
