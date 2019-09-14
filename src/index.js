@@ -90,11 +90,26 @@ class App extends Component {
     const { posts, view } = this.state;
     let content;
     if (view === 'home') {
-      content = <Posts postData={posts} onClick={(id) => this.handlePostClick(id)} />;
+      content = (
+        <Posts
+          postData={posts}
+          onClick={(id) => this.handlePostClick(id)}
+        />
+      );
     } else if (view === 'about') {
-      content = <About onClick={this.handleHomeClick} />;
+      content = (
+        <About
+          onClick={this.handleHomeClick}
+        />
+      );
     } else {
-      content = <SinglePost postData={posts} postId={view} onClick={this.handleHomeClick} />;
+      content = (
+        <SinglePost
+          postData={posts}
+          postId={view}
+          onClick={this.handleHomeClick}
+        />
+      );
     }
 
     return (
