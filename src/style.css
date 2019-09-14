@@ -11,16 +11,38 @@ ul {
   padding: 10px;
 }
 
+main {
+  margin-top: 70px;
+}
 
-.nav-item,.nav-item span {
+button {
+  outline: none;
+}
+
+.nav-item {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-item {
   background-color: #d4d4d4;
   padding: 10px;
-  font-size: 20px;
+}
+
+.nav-title {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .nav-home, .nav-about {
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
+  background-color: #d4d4d4;
+  border: 0px;
+  padding: 5px;
+  font-weight: bold;
 }
 
 .nav-home:hover, .nav-about:hover, .post-title:hover {
@@ -38,10 +60,13 @@ ul {
 }
 
 .post-title {
+  width: 100%;
   font-size: 18px;
   padding: 10px;
   border: 1px solid grey;
   cursor: pointer;
+  text-align: left;
+  background-color: #ffff78;
 }
 
 .posts-content {
