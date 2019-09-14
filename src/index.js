@@ -24,9 +24,7 @@ function Posts(props) {
           postData.map((post) => (
             <li key={post.id}>
               <button type="button" className="post-title" onClick={() => onClick(post.id)}>
-                {post.id}
-                .
-                {post.title}
+                {`${post.id}. ${post.title}`}
               </button>
             </li>
           ))
@@ -93,7 +91,7 @@ class App extends Component {
       content = (
         <Posts
           postData={posts}
-          onClick={(id) => this.handlePostClick(id)}
+          onClick={this.handlePostClick}
         />
       );
     } else if (view === 'about') {
