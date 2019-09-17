@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import SinglePost from '../singlePost/SinglePost.js';
 import './Posts.css';
 
@@ -16,10 +17,9 @@ class Posts extends Component {
   }
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((res) => res.json())
-      .then((data) => this.setState({
-        posts: data,
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then((res) => this.setState({
+        posts: res.data,
       }));
   }
 
@@ -32,10 +32,9 @@ class Posts extends Component {
 
   getPost() {
     const { postId } = this.state;
-    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
-      .then((res) => res.json())
-      .then((data) => this.setState({
-        post: data,
+    axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+      .then((res) => this.setState({
+        post: res.data,
       }));
   }
 
