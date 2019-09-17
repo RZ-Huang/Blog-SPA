@@ -1,0 +1,32 @@
+.post {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.post-title {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+  text-align: left;
+  background-color: #ffff78;
+}
+
+.post-back {
+  background-color: #ffff78;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.post-back:hover {
+  font-size: 20px;
+}
+
+.post-content {
+  font-size: 20px;
+}
