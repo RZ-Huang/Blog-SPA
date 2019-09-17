@@ -31,6 +31,7 @@ module.exports = {
     "import/extensions": ["error", "ignorePackages"],
     "react/prop-types": [0],
     "react/no-array-index-key": [0],
-    "react/no-multi-comp": [1, { "ignoreStateless": true }]
+    "react/no-multi-comp": [1, { "ignoreStateless": true }],
+    "react/jsx-first-prop-new-line": ["error", "never"]
   },
 };

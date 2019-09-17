@@ -1,0 +1,11 @@
+.home {
+  margin: 20px;
+}
+
+.home-title {
+  text-decoration: underline;
+}
+
+.home-content {
+  font-size: 16px;
+}

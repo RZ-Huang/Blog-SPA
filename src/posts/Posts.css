@@ -1,0 +1,14 @@
+.posts {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.post-title {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+  text-align: left;
+  background-color: #ffff78;
+}
