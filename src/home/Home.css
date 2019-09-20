@@ -1,11 +1,64 @@
 .home {
-  margin: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
 }
 
 .home-title {
   text-decoration: underline;
+  font-size: 3em;
+  margin-bottom: 15px;
 }
 
 .home-content {
-  font-size: 16px;
+  font-size: 1.5em;
+}
+
+.add-post {
+  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  background-color: #c0e6ff;
+  box-shadow: 10px 10px;
+}
+
+.add-post-header {
+  font-weight: 800;
+  margin: 1em;
+  font-size: 2em;
+}
+
+.add-post-author,.add-post-title, .add-post-body, .add-post-submit {
+  margin-bottom: 10px;
+}
+
+.input-text, .input-textarea, .button-submit {
+  padding: 5px;
+  width: 50%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #333;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 2px;
+}
+
+.button-submit {
+  font-weight: 600;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.button-submit:hover {
+  background-color: #000;
+  color: white;
+  box-shadow: 2px 2px black;
 }

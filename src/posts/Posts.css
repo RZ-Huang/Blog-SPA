@@ -1,14 +1,38 @@
 .posts {
   margin: 0 auto;
   max-width: 1000px;
+  font-size: 14px;
 }
 
-.post-title {
+.posts-header {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.posts-title {
   width: 100%;
   font-size: 18px;
   padding: 10px;
-  border: 1px solid grey;
+  padding-bottom: 20px;
+  border-bottom: 2px solid grey;
   cursor: pointer;
   text-align: left;
-  background-color: #ffff78;
+  background-color: #f1f1f1;
+  -webkit-transition: all .3s linear ;
+  -moz-transition: all .3s linear ;
+  -ms-transition: all .3s linear ;
+  -o-transition: all .3s linear ;
+  transition: all .3s linear ;
+}
+
+ .posts-title:hover {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  transform: translate(-5px,-5px)
+ }
+ 
+button {
+  border: none;
+  background-color: #f1f1f1;
 }

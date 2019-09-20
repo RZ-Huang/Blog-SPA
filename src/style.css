@@ -2,7 +2,7 @@ body {
   margin: 0px;
   box-sizing: border-box;
   font: 14px "Century Gothic", Futura, sans-serif;
-  background-color: #d5f1d4;
+  background-color: #f1f1f1;
 }
 
 ul {
@@ -17,4 +17,14 @@ main {
 
 button {
   outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
 }
