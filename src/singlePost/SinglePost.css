@@ -1,32 +1,36 @@
 .post {
   margin: 0 auto;
   max-width: 1000px;
-}
-
-.post-title {
-  width: 100%;
-  font-size: 18px;
-  padding: 10px;
-  border: 1px solid grey;
-  cursor: pointer;
-  text-align: left;
-  background-color: #ffff78;
+  font-size: 14px;
 }
 
 .post-back {
-  background-color: #ffff78;
+  background-color: #8cd1ff;
   padding: 5px;
   border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
   margin-right: 5px;
+  font-weight: 550;
+  color: rgb(3, 12, 5);
+}
+
+.post-title {
+  font-size: 3em;
+  margin-bottom: 15px;
 }
 
 .post-back:hover {
   font-size: 20px;
 }
 
+.post-author {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
 .post-content {
-  font-size: 20px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }

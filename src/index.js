@@ -1,40 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import Nav from './nav/Nav.js';
 import Home from './home/Home.js';
 import About from './about/About.js';
 import Posts from './posts/Posts.js';
+import SinglePost from './singlePost/SinglePost.js';
 import './style.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      view: 'home',
-    };
-
-    this.onNavChange = this.onNavChange.bind(this);
-  }
-
-  onNavChange(page) {
-    this.setState({
-      view: page,
-    });
-  }
-
-  render() {
-    const { view } = this.state;
-    return (
+function App() {
+  return (
+    <Router>
       <div>
-        <Nav onChange={this.onNavChange} activeView={view} />
+        <Nav />
         <main>
-          {view === 'home' && <Home />}
-          {view === 'post' && <Posts onChange={this.onNavChange} />}
-          {view === 'about' && <About />}
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route exact path="/post" component={Posts} />
+          <Route path="/post/:id" component={SinglePost} />
         </main>
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));

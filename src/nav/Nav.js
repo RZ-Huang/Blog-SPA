@@ -1,31 +1,38 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 import './Nav.css';
 
 function NavItem(props) {
   const {
-    onChange, activeView, name, children,
+    to, exact, name, children,
   } = props;
 
-  return (
-    <button type="button" className={`nav-home ${activeView === name && 'active'}`} onClick={() => onChange(name)}>
-      {children}
+  const item = ({ match }) => (
+    <button type="button" className={`nav-${name}`}>
+      <Link className={match ? 'active' : ''} to={to}>
+        {children}
+      </Link>
     </button>
+  );
+  return (
+    <Route path={to} exact={exact}>
+      {item}
+    </Route>
   );
 }
 
-function Nav(props) {
-  const { onChange, activeView } = props;
+function Nav() {
   return (
     <nav>
       <div className="nav-item">
         <span className="nav-title">Blog</span>
-        <NavItem onChange={onChange} activeView={activeView} name="home">
+        <NavItem to="/" exact={true} name="home">
           Home
         </NavItem>
-        <NavItem onChange={onChange} activeView={activeView} name="post">
+        <NavItem to="/post" name="post">
           Post
         </NavItem>
-        <NavItem onChange={onChange} activeView={activeView} name="about">
+        <NavItem to="/about" name="about">
           About
         </NavItem>
       </div>

@@ -3,10 +3,11 @@
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 10;
 }
 
 .nav-item {
-  background-color: #d4d4d4;
+  background-color: #d7efdf;
   padding: 10px;
 }
 
@@ -15,20 +16,27 @@
   font-weight: bold;
 }
 
-.nav-home, .nav-about {
+.nav-home, .nav-post , .nav-about {
   font-size: 20px;
   cursor: pointer;
-  background-color: #d4d4d4;
+  background-color: #d7efdf;
   border: 0px;
   padding: 5px;
   font-weight: bold;
 }
 
-.nav-home:hover, .nav-about:hover, .post-title:hover, .active {
-  background-color: black;
-  color: white;
+#root .active {
+  border-bottom: 2px solid black;
 }
 
 .nav-title {
   padding: 10px;
+}
+
+.nav-item a {
+  padding: 5px;
+}
+
+.nav-item a:hover {
+  color: grey;
 }
