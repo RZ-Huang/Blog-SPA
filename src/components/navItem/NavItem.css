@@ -1,0 +1,11 @@
+.nav-home, .nav-post , .nav-about, .nav-newPost {
+  font-size: 20px;
+  background-color: #2d3436;
+  border: 0px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.nav-items .active {
+  border-bottom: 2px solid #dfe6e9;
+}
