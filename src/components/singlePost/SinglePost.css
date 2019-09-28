@@ -1,0 +1,81 @@
+.post {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.post-border{
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #f5f5f5; 
+}
+
+.loading {
+  font-size: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.post-area {
+  margin: 20px;
+  position: relative;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post-back {
+  margin-left: 20px;
+  padding: 5px;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 550;
+  font-style: italic;
+}
+
+.post-title {
+  font-size: 3em;
+  word-break: break-all;
+}
+
+.post-back:hover {
+  font-size: 16px;
+}
+
+.post-author {
+  font-size: 1em;
+  margin-bottom: 15px;
+  word-break: break-all;
+}
+
+.post-content {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.button-group {
+  text-align: right;
+}
+
+.post-edit, .post-delete {
+  margin-left: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 62px;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 1px;
+}
+.post-edit:hover, .post-delete:hover {
+  color: #a4a4a4;
+}

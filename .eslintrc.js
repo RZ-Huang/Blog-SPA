@@ -34,6 +34,9 @@ module.exports = {
     "react/no-multi-comp": [1, { "ignoreStateless": true }],
     "react/jsx-first-prop-new-line": ["error", "never"],
     "react/destructuring-assignment": [1, "always"],
-    "react/jsx-boolean-value": [1]
+    "react/jsx-boolean-value": [1],
+    "jsx-a11y/anchor-is-valid": [1],
+    "jsx-a11y/click-events-have-key-events": [1],
+    "react/jsx-props-no-spreading": [1]
   },
 };

@@ -1,0 +1,11 @@
+.home {
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.posts-header {
+  margin: 0.5em;
+  font-size: 3em;
+}
