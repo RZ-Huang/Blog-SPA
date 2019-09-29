@@ -16,9 +16,14 @@ class SinglePost extends Component {
   }
 
   handleDeletePost(id) {
+    if (!window.confirm('確定刪除留言？')) return null;
     const { history } = this.props;
-    deletePost(id).then(() => history.goBack());
-    alert('刪除成功');
+    deletePost(id).then(() => {
+      history.goBack();
+      alert('刪除成功');
+    });
+
+    return null;
   }
 
   render() {

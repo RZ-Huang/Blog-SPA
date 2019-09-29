@@ -31,9 +31,14 @@ class EditPost extends Component {
   }
 
   handleDeletePost(id) {
+    if (!window.confirm('確定刪除留言？')) return null;
     const { history } = this.props;
-    deletePost(id).then(() => history.go(-2));
-    alert('刪除成功。');
+    deletePost(id).then(() => {
+      history.go(-2);
+      alert('刪除成功。');
+    });
+
+    return null;
   }
 
   handleSubmit(e) {

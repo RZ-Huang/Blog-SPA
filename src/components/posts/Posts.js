@@ -3,7 +3,9 @@ import './Posts.css';
 
 class Posts extends Component {
   componentDidMount() {
-    this.props.getPostsList();
+    const { getPostsList, handleNavPage, match } = this.props;
+    getPostsList();
+    handleNavPage(match.url);
   }
 
   render() {
@@ -14,7 +16,7 @@ class Posts extends Component {
           <div className="posts-area">
             <h1 className="posts-header">Blog Posts</h1>
             <ul>
-              {isLoadingGetPosts && 'Loading...'}
+              {isLoadingGetPosts && <div className="loading">Loading...</div>}
               {!isLoadingGetPosts
                 && posts.map((postItem) => (
                   <li key={postItem.id}>

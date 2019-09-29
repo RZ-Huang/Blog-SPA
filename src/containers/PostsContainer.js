@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
       dispatch(actions.getPostsSuccess(res.data));
     });
   },
+  handleNavPage: (page) => dispatch(actions.handleNavPage(page)),
 });
 
 export default withRouter(
