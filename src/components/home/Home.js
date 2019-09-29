@@ -9,11 +9,14 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.props.getPostsList(10);
+    const { getPostsList, handleNavPage, match } = this.props;
+    getPostsList(10);
+    handleNavPage(match.url);
   }
 
   render() {
     const { history, posts, isLoadingGetPosts } = this.props;
+
     return (
       <div className="home">
         <div className="container">

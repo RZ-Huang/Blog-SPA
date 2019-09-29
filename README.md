@@ -5,9 +5,10 @@ Blog SPA Using React/React-router/Redux
 #### UI
 * 調整編輯文章的版面。
 * 「Back」按鍵的優化。
+* 「Loading」讀取中的元素，改成圖示或是優化文字。
 #### 操作
 * Home 頁面只提供閱讀資訊。
-* 編輯與刪除按紐的 UX 設計。
-
-### 待解決的 Bug
-* Navigation bar 的導覽問題：Redux 的 store 與網址不同步，也就是在改變網址後，store 不會跟著變化。 
+* 編輯與刪除按鈕的 UX 設計。
+* 文章的分頁。
+#### CSS
+* 使用 SCSS 優化。

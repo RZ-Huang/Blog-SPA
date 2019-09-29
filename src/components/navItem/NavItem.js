@@ -4,12 +4,11 @@ import './NavItem.css';
 
 function NavItem(props) {
   const {
-    to, exact, name, children, navPage, handleNavPage,
+    to, exact, name, children, navPage,
   } = props;
-
   const item = () => (
-    <button type="button" className={`nav-${name}`} onClick={() => { handleNavPage(to); }}>
-      <Link className={`nav-item ${navPage === to ? 'active' : ''}`} to={to}>
+    <button type="button" className={`nav-${name}`}>
+      <Link className={`nav-item ${navPage === `${to}` ? 'active' : ''}`} to={to}>
         {children}
       </Link>
     </button>

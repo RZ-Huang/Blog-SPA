@@ -15,6 +15,11 @@ class NewPost extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    const { handleNavPage, match } = this.props;
+    handleNavPage(match.url);
+  }
+
   onChangeValue(e) {
     this.setState({
       [e.target.name]: e.target.value,

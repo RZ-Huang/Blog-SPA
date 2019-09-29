@@ -11,8 +11,8 @@ import navReducer from './reducer.js';
 // components of pages
 import Nav from './components/nav/Nav.js';
 import Home from './containers/HomeContainer.js';
-import About from './components/about/About.js';
-import NewPost from './components/newPost/NewPost.js';
+import About from './containers/AboutContainer.js';
+import NewPost from './containers/NewPostContainer.js';
 import Posts from './containers/PostsContainer.js';
 import SinglePost from './containers/SinglePostContainer.js';
 import EditPost from './containers/EditPostContainer.js';
