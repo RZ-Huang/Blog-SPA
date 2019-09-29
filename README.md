@@ -10,7 +10,5 @@ Blog SPA Using React/React-router/Redux
 * Home 頁面只提供閱讀資訊。
 * 編輯與刪除按鈕的 UX 設計。
 * 文章的分頁。
-
 #### CSS
 * 使用 SCSS 優化。
-
