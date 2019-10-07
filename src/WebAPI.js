@@ -8,6 +8,6 @@ export const getLimitPosts = (limitNumber) => axios.get(`https://qootest.com/pos
 
 export const deletePost = (id) => axios.delete(`https://qootest.com/posts/${id}`);
 
-export const updatSinglePost = (id, title, author, body) => axios.patch(`https://qootest.com/posts/${id}`, { title, author, body });
+export const updatePost = (id, title, author, body) => axios.patch(`https://qootest.com/posts/${id}`, { title, author, body });
 
 export const addPost = (title, body, author) => axios.post('https://qootest.com/posts', { title, body, author });

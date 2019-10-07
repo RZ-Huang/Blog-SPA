@@ -5,8 +5,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Redux
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
-import navReducer from './reducer.js';
+import store from './store.js';
 
 // components of pages
 import Nav from './components/nav/Nav.js';
@@ -17,12 +16,6 @@ import Posts from './containers/PostsContainer.js';
 import SinglePost from './containers/SinglePostContainer.js';
 import EditPost from './containers/EditPostContainer.js';
 import './style.css';
-
-const reducers = combineReducers({
-  nav: navReducer,
-});
-
-const store = createStore(reducers);
 
 function App() {
   return (
@@ -49,5 +42,6 @@ function App() {
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>, document.getElementById('root'),
+  </Provider>,
+  document.getElementById('root'),
 );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { addPost } from '../../WebAPI.js';
 import './NewPost.css';
 
 class NewPost extends Component {
@@ -20,6 +19,17 @@ class NewPost extends Component {
     handleNavPage(match.url);
   }
 
+  componentDidUpdate(prepProps) {
+    const { isLoadingPostNewPost } = this.props;
+    if (prepProps.isLoadingPostNewPost === true && isLoadingPostNewPost === false) {
+      this.setState({
+        title: '',
+        body: '',
+        author: '',
+      });
+    }
+  }
+
   onChangeValue(e) {
     this.setState({
       [e.target.name]: e.target.value,
@@ -29,19 +39,10 @@ class NewPost extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { title, body, author } = this.state;
+    const { addNewPost } = this.props;
     if (title === '') alert('請填寫標題。');
     if (title !== '') {
-      addPost(title, body, author).then(() => {
-        alert('成功新增文章。');
-        this.setState({
-          title: '',
-          body: '',
-          author: '',
-        });
-      }).catch((error) => {
-        alert('提交失敗，請重新提交。');
-        console.log(error);
-      });
+      addNewPost(title, body, author);
     }
   }
 
