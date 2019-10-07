@@ -20,10 +20,9 @@ body {
   z-index: -100;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 10px;
+ul,li,ol  {
+  margin-left: 10px;
+  padding: 0px;
 }
 
 main {

@@ -1,5 +1,25 @@
 # Blog-SPA
-Blog SPA Using React/React-router/Redux
+SPA 架構且使用 React library 的部落格，串接文章 API。開發環境支援 ESLint 檢查。
+
+### 功能
+
+* 閱讀文章 / 新增文章 / 編輯文章 / 刪除文章
+* 支援 Markdown 語法
+
+### 主要使用的技術
+
+* React / Redux
+* AJAX
+
+### 主要使用的套件
+
+* react / react-dom
+* react-router-dom
+* react-redux
+* redux
+* redux-promise-middleware
+* axios
+* css-loader / style-loader
 
 ### 待調整項目
 #### UI

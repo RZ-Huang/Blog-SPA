@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { deletePost, updatSinglePost } from '../../WebAPI.js';
 import './EditPost.css';
 
 class EditPost extends Component {
@@ -24,6 +23,16 @@ class EditPost extends Component {
     this.props.getSinglePost(id);
   }
 
+  componentDidUpdate(prepProps) {
+    const { history, isLoadingUpdateSinglePost, isLoadingDeleteSinglePost } = this.props;
+    if (prepProps.isLoadingUpdateSinglePost === true && isLoadingUpdateSinglePost === false) {
+      history.goBack();
+    }
+    if (prepProps.isLoadingDeleteSinglePost === true && isLoadingDeleteSinglePost === false) {
+      history.go(-2);
+    }
+  }
+
   onChangeValue(e) {
     this.setState({
       [e.target.name]: e.target.value,
@@ -31,12 +40,9 @@ class EditPost extends Component {
   }
 
   handleDeletePost(id) {
+    const { deleteSinglePost } = this.props;
     if (!window.confirm('確定刪除留言？')) return null;
-    const { history } = this.props;
-    deletePost(id).then(() => {
-      history.go(-2);
-      alert('刪除成功。');
-    });
+    deleteSinglePost(id);
 
     return null;
   }
@@ -46,16 +52,10 @@ class EditPost extends Component {
     const {
       id, title, body, author,
     } = this.state;
-    const { history } = this.props;
+    const { updateSinglePost } = this.props;
     if (title === '') alert('請填寫標題。');
     if (title !== '') {
-      updatSinglePost(id, title, author, body).then(() => {
-        alert('編輯文章成功。');
-        history.goBack();
-      }).catch((error) => {
-        alert('提交失敗，請重新提交。');
-        console.log(error);
-      });
+      updateSinglePost(id, title, author, body);
     }
   }
 

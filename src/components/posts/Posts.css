@@ -1,3 +1,7 @@
+.posts-header + ul {
+  list-style-type: none;
+}
+
 .posts {
   font-size: 14px;
   text-align: center;

@@ -37,6 +37,7 @@ module.exports = {
     "react/jsx-boolean-value": [1],
     "jsx-a11y/anchor-is-valid": [1],
     "jsx-a11y/click-events-have-key-events": [1],
-    "react/jsx-props-no-spreading": [1]
+    "react/jsx-props-no-spreading": [1],
+    "react/no-did-update-set-state": [1]
   },
 };
